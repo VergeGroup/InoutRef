@@ -38,11 +38,16 @@ So previously we had should care about the number of `commit` call.
 Take a look example code below.
 
 ```swift
+
 commit { state in
   if state.somethingFlag {
     state.text = "Hi"
   }
 }
+
+// how the state did change?
+// state.text might be changed or not. It depends if-statement inside.
+// If we could commit's modifications are empty, we stop commit.
 ```
 
 In this case, `commit` does nothing updates if `state.somethingFlag` is false. 
