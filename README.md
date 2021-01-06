@@ -49,9 +49,9 @@ It' should be like this, Doing commit only needed to modify.
 
 ```swift
 if state.somethingFlag {
-	commit { state in
+  commit { state in
     state.text = "Hi"
-	}
+  }
 }
 ```
 
@@ -61,6 +61,14 @@ This means that if-statement was true, the commit might be no need while steppin
 
 So, switching if do commit or not should be decided inside commit session to protect from concurrent programming.
 But a lot of commit gains computing costs.
+
+### InoutRef can detect any changes happend, and received modifications with NO COPY.
+
+`InoutRef` solves this problem. It enables Verge to detect that has any changes or not.  
+Using that information, Verge can skip finalization of commit which means dispatching update events to all of subscribers.
+
+Even though `InoutRef` is a wrapper structure, it receives the pointer of the wrapped value.  
+So using `InoutRef` does not happen copy.
 
 ## Sample
 
