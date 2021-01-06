@@ -2,6 +2,9 @@
 
 This is not an official library currently. It's for introduction how Verge detects the `commit` contains if any modifications with passing the reference of the `State`.
 
+Using here in Verge
+https://github.com/VergeGroup/Verge/blob/319c25523612baa27e016c4041c1497b68fb5622/Sources/Verge/Store/Store.swift#L175
+
 ## Motivation
 
 ### A reason why we use `inout` is to get better performance.
