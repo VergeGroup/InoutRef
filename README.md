@@ -20,6 +20,9 @@ func modify(_ value: inout MyState) {
 
 var state = MyState()
 modify(&state)
+
+// what properties did `modify` change?
+// we can't get this.
 ```
 
 Swift's struct is quite fast to copy. However, it might be serious performance issues when that structure contains a lot of properties which means it's a large struct.
