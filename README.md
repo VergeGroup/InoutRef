@@ -1,5 +1,10 @@
 # InoutRef
 
+This is not an official library currently. It's for introduction how Verge detects the `commit` contains if any modifications with passing the reference of the `State`.
+
+## Motivation
+
+
 
 ## Sample
 
